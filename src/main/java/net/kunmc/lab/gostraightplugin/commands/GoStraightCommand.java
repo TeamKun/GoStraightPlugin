@@ -76,7 +76,8 @@ public class GoStraightCommand implements CommandExecutor, TabCompleter {
 
         GoStraightPlugin.enable = true;
         Bukkit.getOnlinePlayers().forEach(player -> {
-            player.sendTitle("GoStraightPlugin", ChatColor.RED + GoStraightPlugin.axis.getDisplayName() + "軸から出たら死んじゃうよ～ん",
+            player.sendTitle("直進プラグイン",
+                    ChatColor.RED + GoStraightPlugin.axis.getDisplayName() + "軸から出たら死んじゃうよ～ん",
                     10, 80, 10);
         });
 

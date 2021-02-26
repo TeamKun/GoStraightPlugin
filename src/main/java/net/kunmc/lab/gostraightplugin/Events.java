@@ -11,7 +11,9 @@ public class Events implements Listener {
 
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent event) {
-        event.setDeathMessage("");
+        if (event.getDeathMessage().contains("died")) {
+            event.setDeathMessage(event.getEntity().getDisplayName() + "ははみ出た！");
+        }
     }
 
     @EventHandler
